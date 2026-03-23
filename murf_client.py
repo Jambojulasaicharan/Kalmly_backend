@@ -14,7 +14,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Security best practice: prioritize environment variables over hardcoded keys [cite: 112]
-MURF_API_KEY = "ap2_8fc9310d-8e69-4a3b-98c1-f7f77854ccc1"
+MURF_API_KEY = os.getenv("MURF_API_KEY")
 
 class MurfStreamClient:
     """
